@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible"
+		content="IE=edge">
+	<meta name="viewport"
+		content="width=device-width,
+				initial-scale=1.0">
+	<title>Metro Express Mauritius</title>
+	<link rel="stylesheet"
+		href="style.css">
+	<link rel="stylesheet"
+		href="responsive.css">
+</head>
+
+<body onload="getFareMedia()">
+
+	<!-- for header part -->
+	<header>
+
+		<div class="logosec">
+			<img src="https://iili.io/HZDOZRs.md.png"
+				 class="icn menuicn"
+				 id="menuicn"
+				 alt="menu-icon">
+			<img src="https://iili.io/HZDGTw7.png"
+				 class="dpicn"
+				 alt="dp">
+			<div class="logo">Metro Express Mauritius</div>
+		</div>
+
+		<div class="dp">
+			<img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210180014/profile-removebg-preview.png"
+				 class="dpicn"
+				 alt="dp">
+		</div>
+		<!--
+	<div class="searchbar">
+		<input type="text"	placeholder="Search" >
+		< div class="searchbtn" >
+		< img src=
+	"https://media.geeksforgeeks.org/wp-content/uploads/20221210180758/Untitled-design-(28).png"
+						class="icn srchicn"
+						alt="search-icon">
+	</div>
+	</div>-->
+
+
+	</header>
+
+	<div class="main-container">
+		<div class="navcontainer">
+			<nav class="nav">
+				<div class="nav-upper-options">
+					<div class="nav-option option3" onclick="window.open('index.html','_self');">
+						<img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/FFFFFF/control-panel--v1.png" alt="dashboard" />
+						<h3> Dashboard</h3>
+					</div>
+
+					<div class="nav-option option2" onclick="window.open('users.html','_self');">
+						<img width="30" height="30" src="https://img.icons8.com/ios-filled/50/FFFFFF/group-foreground-selected.png" alt="users" />
+						<h3> Users</h3>
+					</div>
+
+					<div class="nav-option option1" <div class="option2 nav-option" onclick="window.open('revenue.html','_self');">
+						<img width="30" height="30" src="https://img.icons8.com/ios-filled/50/FFFFFF/graph-report.png" alt="graph-report" />
+						<h3> Revenue</h3>
+					</div>
+					<!--
+					<div class="nav-option option6">
+						<img width="30" height="30" src="https://img.icons8.com/ios-filled/50/FFFFFF/settings.png" alt="settings" />
+						<h3> Settings</h3>
+					</div>
+						-->
+					<div class="nav-option option7">
+						<img width="30" height="30" src="https://img.icons8.com/pastel-glyph/64/FFFFFF/shutdown--v4.png" alt="shutdown--v4" />
+						<h3> logout<h3>
+					</div>
+
+				</div>
+			</nav>
+		</div>
+		<div class="main">
+
+			<div class="report-container">
+				<div class="report-header">
+					<h1 class="recent-Articles">Revenue Report</h1>
+					<button class="view">Export</button>
+				</div>
+
+				<div class="report-filter">
+					<div class="report-header">
+						<h1 class="recent-Articles" id="fm">Fare Media:</h1>
+						<select name="faremedia" id="faremedia">
+							<option id="sut" value="sut">SUT</option>
+							<option id="topup" value="topup">Top-Up</option>
+							<option id="all" value="all">All</option>
+						</select>
+					</div>
+					<div class="report-header">
+						<h1 class="recent-Articles">From:</h1>
+						<input type="date" id="fromdatefilter">
+					</div>
+					<div class="report-header">
+						<h1 class="recent-Articles">To:</h1>
+						<input type="date" id="todatefilter">
+					</div>
+					<button class="view" onclick="getFareMedia()">Search</button>
+				</div>
+
+				<script type="text/javascript">
+					function getFareMedia() {
+							// Get the value from localStorage
+							var v = localStorage.getItem('myValue');
+							// Display the value on the page
+							document.getElementById(v).setAttribute('selected','selected');
+					};
+                    document.getElementById("fromdatefilter").valueAsDate = new Date();
+                    document.getElementById("todatefilter").valueAsDate = new Date();				
+					
+				</script>
+
+				<script src="text/x-jquery-tmpl">
+					$("#faremedia").
+				</script>
+
+				<div class="report-body">
+					<table class="report-topic-heading">
+						<tr>
+							<th class="t-op">Fare Media</th>
+							<th class="t-op">Revenue</th>
+							<th class="t-op">Time</th>
+							<th class="t-op">Department</th>
+							<th class="t-op">Arrival</th>
+						</tr>
+						<tr class="items">
+							<td class="t-op-nextlvl">SUT</td>
+							<td class="t-op-nextlvl">38</td>
+							<td class="t-op-nextlvl">01-08-2023 13:34</td>
+							<td class="t-op-nextlvl">Floreal</td>
+							<td class="t-op-nextlvl">St Jean</td>
+						</tr>
+						<tr class="items">
+							<td class="t-op-nextlvl">SUT</td>
+							<td class="t-op-nextlvl">47</td>
+							<td class="t-op-nextlvl">01-08-2023 13:37</td>
+							<td class="t-op-nextlvl">Trianon</td>
+							<td class="t-op-nextlvl">Port Louis Victoria</td>
+						</tr>
+						<tr class="items">
+							<td class="t-op-nextlvl">Top-Up</td>
+							<td class="t-op-nextlvl">500</td>
+							<td class="t-op-nextlvl">01-08-2023 13:45</td>
+							<td class="t-op-nextlvl">-</td>
+							<td class="t-op-nextlvl">-</td>
+						</tr>
+					</table>
+					<!--
+		<div class="report-topic-heading">
+			<h3 class="t-op">Fare Media</h3>
+			<h3 class="t-op">Revenue</h3>
+			<h3 class="t-op">Time</h3>
+			<h3 class="t-op">Departure</h3>
+			<h3 class="t-op">Arrival</h3>
+		</div>
+
+		<div class="items">
+			<div class="item1">
+				<h3 class="t-op-nextlvl">SUT</h3>
+				<h3 class="t-op-nextlvl">38</h3>
+				<h3 class="t-op-nextlvl">01-08-2023 13:24</h3>
+				<h3 class="t-op-nextlvl">Floreal</h3>
+				<h3 class="t-op-nextlvl">St Jean</h3>
+			</div>
+
+			<div class="item1">
+				<h3 class="t-op-nextlvl">Top-Up</h3>
+				<h3 class="t-op-nextlvl">38</h3>
+				<h3 class="t-op-nextlvl">01-08-2023 13:24</h3>
+				<h3 class="t-op-nextlvl">Floreal</h3>
+				<h3 class="t-op-nextlvl">St Jean</h3>
+			</div>
+
+			<div class="item1">
+				<h3 class="t-op-nextlvl">Article 71</h3>
+				<h3 class="t-op-nextlvl">1.1k</h3>
+				<h3 class="t-op-nextlvl">150</h3>
+				<h3 class="t-op-nextlvl label-tag">Published</h3>
+			</div>
+
+
+		</div>-->
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="./index.js"></script>
+</body>
+</html>

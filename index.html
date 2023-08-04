@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible"
+		content="IE=edge">
+	<meta name="viewport"
+		content="width=device-width,
+				initial-scale=1.0">
+	<title>Metro Express Mauritius</title>
+	<link rel="stylesheet"
+		href="style.css">
+	<link rel="stylesheet"
+		href="responsive.css">
+</head>
+
+<body>
+
+	<!-- for header part -->
+	<header>
+		
+		<div class="logosec">
+			<img src="https://iili.io/HZDOZRs.md.png"
+				 class="icn menuicn"
+				 id="menuicn"
+				 alt="menu-icon">
+			<img src="https://iili.io/HZDGTw7.png"
+				 class="dpicn"
+				 alt="dp">
+			<div class="logo">Metro Express Mauritius</div>
+		</div>
+
+			<div class="dp">
+				<img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210180014/profile-removebg-preview.png"
+					 class="dpicn"
+					 alt="dp">
+			</div>
+		
+	</header>
+
+	<div class="main-container">
+		<div class="navcontainer">
+			<nav class="nav">
+				<div class="nav-upper-options">
+					<div class="nav-option option1" onclick="window.open('index.html','_self');">
+						<img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/FFFFFF/control-panel--v1.png" alt="dashboard" />
+						<h3> Dashboard</h3>
+					</div>
+
+					<div class="nav-option option2" onclick="window.open('users.html','_self');">
+						<img width="30" height="30" src="https://img.icons8.com/ios-filled/50/FFFFFF/group-foreground-selected.png" alt="users" />
+						<h3> Users</h3>
+					</div>
+
+					<div class="nav-option option3" onclick="window.open('revenue.html','_self');">
+						<img width="30" height="30" src="https://img.icons8.com/ios-filled/50/FFFFFF/graph-report.png" alt="graph-report" />
+						<h3> Revenue</h3>
+					</div>
+
+					<!--	<div class="nav-option option6">
+	<img width="30" height="30" src="https://img.icons8.com/ios-filled/50/FFFFFF/settings.png" alt="settings"/>
+							<h3> Settings</h3>
+						</div>
+						-->
+					<div class="nav-option option7">
+						<img width="30" height="30" src="https://img.icons8.com/pastel-glyph/64/FFFFFF/shutdown--v4.png" alt="shutdown--v4" />
+						<h3> logout<h3>
+					</div>
+
+				</div>
+			</nav>
+		</div>
+		<div class="main">
+
+
+			<div class="box-container">
+
+				<div class="box box1" onclick="window.open('users.html','_self');">
+					<img src="https://img.icons8.com/ios-filled/50/FFFFFF/fast-track.png"
+						 alt="Views">
+					<div class="text">
+						<h2 class="topic">Total Mobile App Users:</h2>
+						<h2 class="topic-heading">20314</h2>
+					</div>
+				</div>
+
+				<div class="box box2" onclick="datafunc('sut');">
+					<img src="https://img.icons8.com/ios-filled/50/FFFFFF/get-revenue.png"
+						 alt="likes">
+					<div class="text">
+						<h2 class="topic">Revenue from Mobile SUT:</h2>
+						<h2 class="topic-heading">534550</h2>
+					</div>
+				</div>
+
+				<div class="box box3" onclick="datafunc('topup');">
+					<img src="https://img.icons8.com/ios-filled/50/FFFFFF/wallet.png"
+						 alt="comments">
+					<div class="text">
+						<h2 class="topic">Total Top-up using Mobile App:</h2>
+						<h2 class="topic-heading">1300</h2>
+					</div>
+				</div>
+			</div>
+			<script>
+				function datafunc(value) {
+					localStorage.setItem('myValue', value);
+                    window.location.href = 'revenue.html';
+				}
+			</script>
+			<!--
+	<div class="report-container">
+		<div class="report-header">
+			<h1 class="recent-Articles">Today's Revenue Snap</h1>
+			<button class="view">Export</button>
+		</div>
+
+		<div class="report-body">
+			<div class="report-topic-heading">
+				<h3 class="t-op">SUT Purchase</h3>
+				<h3 class="t-op">Top-Up</h3>
+				<h3 class="t-op">Comments</h3>
+				<h3 class="t-op">Status</h3>
+			</div>
+
+			<div class="items">
+				<div class="item1">
+					<h3 class="t-op-nextlvl">Article 73</h3>
+					<h3 class="t-op-nextlvl">2.9k</h3>
+					<h3 class="t-op-nextlvl">210</h3>
+					<h3 class="t-op-nextlvl label-tag">Published</h3>
+				</div>
+
+				<div class="item1">
+					<h3 class="t-op-nextlvl">Article 72</h3>
+					<h3 class="t-op-nextlvl">1.5k</h3>
+					<h3 class="t-op-nextlvl">360</h3>
+					<h3 class="t-op-nextlvl label-tag">Published</h3>
+				</div>
+
+				<div class="item1">
+					<h3 class="t-op-nextlvl">Article 71</h3>
+					<h3 class="t-op-nextlvl">1.1k</h3>
+					<h3 class="t-op-nextlvl">150</h3>
+					<h3 class="t-op-nextlvl label-tag">Published</h3>
+				</div>
+
+
+				<div class="item1">
+					<h3 class="t-op-nextlvl">Article 70</h3>
+					<h3 class="t-op-nextlvl">1.2k</h3>
+					<h3 class="t-op-nextlvl">420</h3>
+					<h3 class="t-op-nextlvl label-tag">Published</h3>
+				</div>
+
+				<div class="item1">
+					<h3 class="t-op-nextlvl">Article 69</h3>
+					<h3 class="t-op-nextlvl">2.6k</h3>
+					<h3 class="t-op-nextlvl">190</h3>
+					<h3 class="t-op-nextlvl label-tag">Published</h3>
+				</div>
+
+				<div class="item1">
+					<h3 class="t-op-nextlvl">Article 68</h3>
+					<h3 class="t-op-nextlvl">1.9k</h3>
+					<h3 class="t-op-nextlvl">390</h3>
+					<h3 class="t-op-nextlvl label-tag">Published</h3>
+				</div>
+
+			</div>
+		</div>
+	</div>-->
+		</div>
+	</div>
+
+	<script src="./index.js"></script>
+</body>
+</html>
